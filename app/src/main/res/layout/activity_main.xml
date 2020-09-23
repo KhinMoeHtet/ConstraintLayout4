@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_orderNo"
+        style="@style/Text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Order Number : 1245783"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/txt-special"
+        android:layout_width="80dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/request_button"
+        android:text="Special Request"
+
+        android:textSize="9dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_one"
+        android:layout_width="match_parent"
+        android:layout_height="283dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_orderNo">
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/cardView_one"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_one"
+        app:layout_constraintRight_toRightOf="@id/cardView_one"
+        app:layout_constraintTop_toTopOf="@id/cardView_one"
+
+
+        >
+
+        <View
+            android:layout_width="371dp"
+            android:layout_height="2dp"
+            android:background="#6C6B6B" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/vertical_cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_one"
+        app:layout_constraintRight_toRightOf="@id/cardView_one"
+        app:layout_constraintTop_toTopOf="@id/cardView_one"
+
+        >
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="141dp"
+            android:background="#6C6B6B" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_one"
+        app:layout_constraintTop_toTopOf="@id/cardView_one">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="20dp"
+            android:text="105,2000Ks"
+            android:textColor="#E66F6F"
+            android:textSize="22dp"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_one"
+        app:layout_constraintTop_toBottomOf="@id/txtPrice"
+
+        >
+
+        <View
+            android:layout_width="186dp"
+            android:layout_height="2dp"
+            android:background="#6C6B6B" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txtDeliver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="#047A09"
+        app:cardCornerRadius="6dp"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_one"
+        app:layout_constraintTop_toBottomOf="@id/txtPrice"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="DELIVERED"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_orderDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_one"
+        app:layout_constraintTop_toBottomOf="@id/txtDeliver">
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order date-19/9/1990" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_totalItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_one"
+        app:layout_constraintTop_toBottomOf="@id/txt_orderDate">
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Item: 4" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_deliveryDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/vertical_cardView"
+        app:layout_constraintTop_toTopOf="@id/cardView_one"
+
+        >
+
+        <TextView
+            style="@style/Text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Delivery Details"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_grandahome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="#BD7A65"
+        app:cardCornerRadius="6dp"
+        app:layout_constraintLeft_toLeftOf="@id/vertical_cardView"
+        app:layout_constraintTop_toBottomOf="@id/txt_deliveryDetail"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="3dp"
+            android:text="grandma home"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/vertical_cardView"
+        app:layout_constraintTop_toBottomOf="@id/txt_grandahome">
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="167dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="-20dp"
+            android:text="Russia,S.Petersburg 196048 RU Milionnaya street 29, flat 10"
+
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_deliveryCharges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_one"
+        app:layout_constraintTop_toBottomOf="@id/cardView_horizontal">
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Charges" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_appliedCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_one"
+        app:layout_constraintTop_toBottomOf="@id/txt_deliveryCharges">
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Applied Coupon code" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_one"
+        app:layout_constraintTop_toBottomOf="@id/txt_appliedCode">
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discount" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_column_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        app:layout_constraintLeft_toRightOf="@id/txt_deliveryCharges"
+        app:layout_constraintTop_toBottomOf="@id/cardView_horizontal"
+
+        >
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_column_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="23dp"
+        app:layout_constraintLeft_toRightOf="@id/txt_appliedCode"
+        app:layout_constraintTop_toBottomOf="@id/txt_column_one"
+
+        >
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_column_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="101dp"
+        app:layout_constraintLeft_toRightOf="@id/txt_discount"
+        app:layout_constraintTop_toBottomOf="@id/txt_column_two"
+
+        >
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_column_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="48dp"
+        app:layout_constraintBottom_toBottomOf="@id/cardView_one"
+        app:layout_constraintLeft_toRightOf="@id/txt_payment"
+        app:layout_constraintTop_toBottomOf="@id/cardView_horizontal_two"
+
+        >
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_deliveryPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintLeft_toRightOf="@id/txt_column_one"
+        app:layout_constraintTop_toBottomOf="@id/cardView_horizontal"
+
+        >
+
+        <TextView
+            style="@style/txt_column_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2500 KS" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_appliedCodeNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintLeft_toRightOf="@id/txt_column_two"
+        app:layout_constraintTop_toBottomOf="@id/txt_deliveryPrice"
+
+        >
+
+        <TextView
+            style="@style/txt_column_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FG-22365893" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_discountPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintLeft_toRightOf="@id/txt_column_three"
+        app:layout_constraintTop_toBottomOf="@id/txt_appliedCodeNo"
+
+        >
+
+        <TextView
+            style="@style/txt_column_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20% (20410 KS)" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_payment_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/cardView_one"
+
+        app:layout_constraintLeft_toRightOf="@id/txt_column_four"
+        app:layout_constraintTop_toBottomOf="@id/cardView_horizontal_two"
+
+        >
+
+        <TextView
+            style="@style/txt_column_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BANK TRANSFER" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_horizontal_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/cardView_one"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_one"
+        app:layout_constraintRight_toRightOf="@id/cardView_one"
+        app:layout_constraintTop_toTopOf="@id/cardView_one"
+
+        app:layout_constraintVertical_bias=".85"
+
+        app:layout_constraintVertical_chainStyle="packed"
+
+        >
+
+        <View
+            android:layout_width="371dp"
+            android:layout_height="2dp"
+            android:background="#6C6B6B" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/cardView_one"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_one"
+        app:layout_constraintTop_toBottomOf="@id/cardView_horizontal_two">
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Method"
+
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_Phone"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView_one">
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/img_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/cardView_Phone"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_Phone"
+        app:layout_constraintTop_toTopOf="@id/cardView_Phone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/iphone" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_iphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintLeft_toRightOf="@id/img_phone"
+        app:layout_constraintTop_toTopOf="@id/cardView_Phone"
+
+        >
+
+        <TextView
+            style="@style/Text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:text="iphone 8 Plus"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_phoneColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintLeft_toRightOf="@id/img_phone"
+        app:layout_constraintTop_toBottomOf="@id/txt_iphone"
+        app:layout_constraintVertical_chainStyle="packed"
+
+        >
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Gold"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_phoneQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/cardView_Phone"
+        app:layout_constraintLeft_toRightOf="@id/img_phone"
+        app:layout_constraintTop_toBottomOf="@id/txt_phoneColor"
+
+        >
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qty"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_iphonePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintRight_toRightOf="@id/cardView_Phone"
+        app:layout_constraintTop_toTopOf="@id/cardView_Phone"
+
+        >
+
+        <TextView
+            style="@style/txt_column_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="980000 KS" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_blender"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView_Phone">
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/img_blender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/cardView_blender"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_blender"
+        app:layout_constraintTop_toTopOf="@id/cardView_blender">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/blender" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_blender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintLeft_toRightOf="@id/img_blender"
+        app:layout_constraintTop_toTopOf="@id/cardView_blender"
+
+        >
+
+        <TextView
+            style="@style/Text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:text="Blender N41015"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_blenderType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintLeft_toRightOf="@id/img_blender"
+        app:layout_constraintTop_toBottomOf="@id/txt_blender"
+        app:layout_constraintVertical_chainStyle="packed"
+
+        >
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Panasonic"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_blenderQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/cardView_blender"
+        app:layout_constraintLeft_toRightOf="@id/img_blender"
+        app:layout_constraintTop_toBottomOf="@id/txt_blenderType"
+
+        >
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qty"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_blenderPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintRight_toRightOf="@id/cardView_blender"
+        app:layout_constraintTop_toTopOf="@id/cardView_blender"
+
+        >
+
+        <TextView
+            style="@style/txt_column_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="999999 KS" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_bankInfo"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="#D3B6AD"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView_blender">
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_bankInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#D3B6AD"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_bankInfo"
+        app:layout_constraintTop_toTopOf="@id/cardView_bankInfo"
+
+
+        >
+
+        <TextView
+            style="@style/bank_info_txtStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:text="Bank Information" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_bankName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#D3B6AD"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_bankInfo"
+        app:layout_constraintTop_toBottomOf="@id/txt_bankInfo"
+
+
+        >
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:text="Bank Name"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_accNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#D3B6AD"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_bankInfo"
+        app:layout_constraintTop_toBottomOf="@id/txt_bankName"
+
+
+        >
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:text="Account Number"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#D3B6AD"
+        app:layout_constraintLeft_toLeftOf="@id/cardView_bankInfo"
+        app:layout_constraintTop_toBottomOf="@id/txt_accNumber"
+
+
+        >
+
+        <TextView
+            style="@style/txt_normal_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:text="Name"
+
+
+            />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
